@@ -27,6 +27,8 @@ for df in [train, test]:
     df["HomePlanet"] = df["HomePlanet"].fillna("Unknown")
     df["Destination"] = df["Destination"].fillna(df.groupby("Group")["Destination"].transform("first"))
     df["Destination"] = df["Destination"].fillna("Unknown")
+    # df["Cabin"] = df["Cabin"].fillna(df.groupby("Group")["Cabin"].transform("first"))
+
 
 
 # df에서 특징 고르기
